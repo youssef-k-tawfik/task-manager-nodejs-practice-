@@ -14,6 +14,14 @@ const taskSchema = mongoose.Schema({
     enum: ["pending", "ongoing", "completed"],
     default: "pending",
   },
+  dateAdded: {
+    type: Date,
+    default: Date.now,
+    // default: () => Date.now(),
+  },
+  dateFinished: {
+    type: Date,
+  },
 });
 
 const Task = mongoose.model("Task", taskSchema);

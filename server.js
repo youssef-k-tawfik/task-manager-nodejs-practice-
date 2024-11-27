@@ -7,8 +7,11 @@ const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
+
 // load routes
 const indexRouter = require("./routes/index");
+const authRouter = require("./routes/auth");
+
 // setup express
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
@@ -19,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // setup routes
 app.use("/", indexRouter);
+app.use("/auth", authRouter);
 
 // setup mongoose
 mongoose.connect(process.env.DATABASE_URL);
