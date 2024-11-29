@@ -14,7 +14,10 @@
   </head>
   <body>
     <!-- header -->
+    <% if (typeof user !== 'undefined' && user) { %>
     <header><%- include('../partials/header.ejs') %></header>
+    <% } %>
+
     <main><%- body %></main>
     <!-- footer -->
     <footer></footer>
