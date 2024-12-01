@@ -206,3 +206,19 @@ section.home {
 .login-link a:hover {
   text-decoration: underline;
 }
+
+/* * invalid auth button * */
+.login-here {
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
+}
